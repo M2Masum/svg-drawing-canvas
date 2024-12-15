@@ -1,0 +1,43 @@
+  <h1>SVG Drawing Canvas</h1>
+
+  <!-- Controls -->
+  <div class="controls">
+    <div class="control-group">
+      <label for="color-code">Path Color:</label>
+      <input type="color" id="color-code" value="#000000" />
+    </div>
+
+    <div class="control-group">
+      <label for="line-width">Line Width:</label>
+      <input type="range" id="line-width" min="1" max="100" value="2" />
+      <span id="line-width-value">2</span>
+    </div>
+
+    <div class="control-group">
+      <label for="svg-size">SVG Size: <span id="svg-size-value">500</span>px</label>
+      <input type="range" id="svg-size" min="18" max="1000" value="500" />
+    </div>
+
+    <div class="control-group">
+      <label for="background-color">Background Color:</label>
+      <input type="color" id="background-color" value="#ffffff" />
+    </div>
+
+    <div class="control-group">
+      <label>
+        <input type="checkbox" id="transparent-bg" /> Transparent Background
+      </label>
+    </div>
+  </div>
+
+  <!-- Canvas -->
+  <canvas id="canvas"></canvas>
+
+  <!-- SVG Code Display -->
+  <textarea id="svg-code" readonly></textarea>
+
+  <!-- Action Buttons -->
+  <div class="buttons">
+    <button onclick="resetCanvas()">Reset</button>
+    <button onclick="copySVG()">Copy SVG</button>
+  </div>
